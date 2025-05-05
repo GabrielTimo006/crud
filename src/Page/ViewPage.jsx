@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { HOME } from "../Router/RouteApp";
 
 const ViewPage = () => {
   const { id } = useParams();
   const [cliente, setCliente] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCliente = async () => {
@@ -19,13 +21,19 @@ const ViewPage = () => {
     fetchCliente();
   }, [id]);
 
-  if (!cliente) return <div>Cargando...</div>;
-
   return (
     <div>
-      <h2>Detalle del Cliente</h2>
-      <p><strong>Nombre:</strong> {cliente.name}</p>
-      <p><strong>Email:</strong> {cliente.email}</p>
+      {!cliente ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <h2>Detalle del Cliente</h2>
+          <p><strong>Nombre:</strong> {cliente.name}</p>
+          <p><strong>Email:</strong> {cliente.email}</p>
+
+          <button onClick={() => navigate(HOME)}>Volver a Home</button>
+        </>
+      )}
     </div>
   );
 };

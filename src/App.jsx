@@ -8,7 +8,6 @@ import EditPage from "./Page/EditPage";
 import ViewPage from "./Page/ViewPage";
 
 function App() {
-  // const [count, setCount] = useState(0);
 
   return (
     <>
