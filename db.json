@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "a@a",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "b@b",
+      "password": "456"
+    }
+  ],
+  "clientes": [
+    {
+      "id": "1",
+      "name": "Client A",
+      "email": ""
+    },
+    {
+      "id": "2",
+      "name": "Client B",
+      "email": ""
+    },
+    {
+      "id": "c2f2",
+      "name": "matias",
+      "email": "m@m"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "name": "Project X",
+      "description": "Description of Project X",
+      "clientId": 1
+    },
+    {
+      "id": "2",
+      "name": "Project Y",
+      "description": "Description of Project Y",
+      "clientId": 2
+    }
+  ]
+}
