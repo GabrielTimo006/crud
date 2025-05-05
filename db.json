@@ -16,8 +16,8 @@
   "clientes": [
     {
       "id": "1",
-      "name": "Client A",
-      "email": ""
+      "name": "Clienb",
+      "email": "gab@gab"
     },
     {
       "id": "2",
@@ -25,9 +25,9 @@
       "email": ""
     },
     {
-      "id": "c2f2",
-      "name": "matias",
-      "email": "m@m"
+      "id": "eb80",
+      "name": "mika ponce",
+      "email": "sadasd@adasdasd"
     }
   ],
   "projects": [

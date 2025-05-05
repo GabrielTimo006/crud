@@ -30,44 +30,46 @@ const TableCliente = () => {
     }
   };
 
-
   return (
     <>
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Email</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        {clientes.map(({ name, email, id }, idx) => (
-          <tr key={idx}>
-            <td>{id}</td>
-            <td>{name}</td>
-            <td>{email}</td>
-            <td>
-              <Button variant="primary" onClick={() => alert(`Edit ${name}`)}>
-                Editar
-              </Button>
-              <Button variant="danger" onClick={() => HandleDelete(id)}>
-                Eliminar
-              </Button>
-              <Button variant="success" onClick={() => alert(`View ${name}`)}>
-                Ver
-              </Button>{" "}
-            </td>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
-    <Link to={NEWCLIENTE}>
-    <Button variant="primary" onClick={() => alert("Crear nuevo cliente")}>
-      Crear nuevo cliente
-    </Button>
-    </Link>
+        </thead>
+        <tbody>
+          {clientes.map(({ name, email, id }, idx) => (
+            <tr key={idx}>
+              <td>{id}</td>
+              <td>{name}</td>
+              <td>{email}</td>
+              <td>
+                {/* <Button variant="primary" onClick={() => alert(`Edit ${name}`)}>
+                Editar
+              </Button> */}
+                <Link to={`/editcliente/${id}`}>
+                  <Button variant="primary">Editar</Button>
+                </Link>
+                <Button variant="danger" onClick={() => HandleDelete(id)}>
+                  Eliminar
+                </Button>
+                <Button variant="success" onClick={() => alert(`View ${name}`)}>
+                  Ver
+                </Button>{" "}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      <Link to={NEWCLIENTE}>
+        <Button variant="primary" onClick={() => alert("Crear nuevo cliente")}>
+          Crear nuevo cliente
+        </Button>
+      </Link>
     </>
   );
 };
