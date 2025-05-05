@@ -57,9 +57,9 @@ const TableCliente = () => {
                 <Button variant="danger" onClick={() => HandleDelete(id)}>
                   Eliminar
                 </Button>
-                <Button variant="success" onClick={() => alert(`View ${name}`)}>
-                  Ver
-                </Button>{" "}
+                <Link to={`/viewcliente/${id}`}>
+                  <Button variant="success">Ver</Button>
+                </Link>{" "}
               </td>
             </tr>
           ))}
